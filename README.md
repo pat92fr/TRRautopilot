@@ -9,10 +9,11 @@ Dependency : Enet library (http://enet.bespin.org/). Precompiled in enet/ direct
 ## How to use
 1) Launch TRRsim.exe,
  Note : TRR simulator (server) requires local network access (port:1234).
-2) launch TRRautopilot.exe.
+2) TRR simulator displays "Waiting for autopilot..."
+3) launch TRRautopilot.exe.
  Note : TRR autopilot (client) will try to connect to localhost IP and port 1234.
-3) TRRsim will display "Autopilot OK" on top of the screen
-4) Start autopilot by hitting F3 key in TRRsim. Suspend by hitting F4. Restrart by F2.
+4) TRRsim will display "Autopilot connected" on top of the screen
+5) Start autopilot by hitting F3 key in TRRsim. Hit F4 to suspend, F2 to restrart. and F1 for help.
 
 ## How to create your own autopilot (C/C++ coding)
 * open main.cpp
