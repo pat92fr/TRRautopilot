@@ -15,6 +15,8 @@ Dependency : Enet library (http://enet.bespin.org/). Precompiled in enet/ direct
 4) TRRsim will display "Autopilot connected" on top of the screen
 5) Start autopilot by hitting F3 key in TRRsim. Hit F4 to suspend, F2 to restrart. and F1 for help.
 
+TRR simulator (process) doesn't need to be restarted when TRR autopilot (process) has to be stopped, recompiled and restarted (algorithm changes).
+
 ## How to create your own autopilot (C/C++ coding)
 * open main.cpp
 * create a new Crobot_autopilot class
