@@ -1,7 +1,7 @@
 # TRRautopilot
  TRR simulator autopilot
  
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/Oe0HFSuLpZk/0.jpg)](http://www.youtube.com/watch?v=Oe0HFSuLpZk "Video Title")
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/Oe0HFSuLpZk/0.jpg)](http://www.youtube.com/watch?v=Oe0HFSuLpZk "TRRsim")
 
 ## How to build the project
 Open 'TRRautopilot.cbp' with Code::Blocks (20.03) and MinGW. 
