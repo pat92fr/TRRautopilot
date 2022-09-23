@@ -30,9 +30,9 @@ struct Cautopilot_example : Cautopilot
         out.direction = std::clamp(direction_pid_output,-1.0f,1.0f);
 
         // compute throttle setpoint
-        float const velocity_setpoint = 2600.0f; // mm/s
-        float const velocity_kp = 0.002f;
-        float const velocity_error = velocity_setpoint - in.velocity_mms;
+        float const velocity_setpoint = 2.6f; // m/s
+        float const velocity_kp = 2.0f;
+        float const velocity_error = velocity_setpoint - in.velocity_mps;
         float const velocity_pid_output = velocity_kp*velocity_error;
         out.throttle = std::clamp(velocity_pid_output,-1.0f,1.0f);
     }
