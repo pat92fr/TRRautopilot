@@ -28,6 +28,7 @@ struct Cautopilot_inut_sensors
     float lidar_front_distance_mm = 0.0f;
     float lidar_top_distance_mm = 0.0f;
     float velocity_mps = 0.0f;
+    float angular_velocity_dps = 0.0f;
     float manual_direction = 0.0f;
     float manual_throttle = 0.0f;
 };

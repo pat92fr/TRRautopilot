@@ -44,3 +44,48 @@
 	"robot_autopilot.h"
 	<iostream>
 
+1663967430 source:c:\irrlicht-1.8.5\examples\trrautopilot\main.cpp
+	<iostream>
+	<algorithm>
+	"client.h"
+
+1663871755 c:\irrlicht-1.8.5\examples\trrautopilot\client.h
+	<enet/enet.h>
+	"robot_autopilot.h"
+	<iostream>
+
+1605465831 c:\irrlicht-1.8.5\examples\trrautopilot\enet\enet\enet.h
+	<stdlib.h>
+	"enet/win32.h"
+	"enet/unix.h"
+	"enet/types.h"
+	"enet/protocol.h"
+	"enet/list.h"
+	"enet/callbacks.h"
+
+1605465831 c:\irrlicht-1.8.5\examples\trrautopilot\enet\enet\win32.h
+	<stdlib.h>
+	<winsock2.h>
+
+1605465831 c:\irrlicht-1.8.5\examples\trrautopilot\enet\enet\unix.h
+	<stdlib.h>
+	<sys/time.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<arpa/inet.h>
+	<netinet/in.h>
+	<unistd.h>
+
+1605465831 c:\irrlicht-1.8.5\examples\trrautopilot\enet\enet\types.h
+
+1605465831 c:\irrlicht-1.8.5\examples\trrautopilot\enet\enet\protocol.h
+	"enet/types.h"
+
+1605465831 c:\irrlicht-1.8.5\examples\trrautopilot\enet\enet\list.h
+	<stdlib.h>
+
+1605465831 c:\irrlicht-1.8.5\examples\trrautopilot\enet\enet\callbacks.h
+	<stdlib.h>
+
+1664221536 c:\irrlicht-1.8.5\examples\trrautopilot\robot_autopilot.h
+
