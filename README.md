@@ -52,7 +52,7 @@ struct Cautopilot_inut_sensors
 ```
 struct Cautopilot_output_commands
 {
-    float direction = 0.0f;
-    float throttle = 0.0f;
+    float direction = 0.0f;        // -1.0 MAX LEFT   +1.0 MAX RIGHT
+    float throttle = 0.0f;         // -1.0 MAX BRAKE  +1.0 MAX THROTTLE
 };
 ```
