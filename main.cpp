@@ -24,7 +24,7 @@ struct Cautopilot_example : Cautopilot
 
         // compute direction setpoint
         float const position_setpoint = 0.0f;
-        float const position_kp = 0.001f;
+        float const position_kp = 0.01f;
         float const position_error = position_setpoint - position_estimation;
         float const direction_pid_output = -position_kp*position_error; // reverse DIR
         out.direction = std::clamp(direction_pid_output,-1.0f,1.0f);
