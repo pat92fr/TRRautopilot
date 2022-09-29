@@ -28,20 +28,21 @@ TRR simulator (process) doesn't need to be restarted when TRR autopilot (process
 ## Autopilot data inputs (sensors)
 * Time
 * Distance measured by virtual LIDARs (zero if obstacle distance is too far > 6m)
-* Actual velocity
+* Speed and angular velocity (with noise)
 * Joystick direction and throttle setpoints
 ```
 struct Cautopilot_inut_sensors
 {
     unsigned int command = 0;
-    unsigned int time_ms = 0;
-    float lidar_left_distance_mm = 0.0f;
-    float lidar_right_distance_mm = 0.0f;
-    float lidar_front_distance_mm = 0.0f;
-    float lidar_top_distance_mm = 0.0f;
-    float velocity_mps = 0.0f;
-    float manual_direction = 0.0f;
-    float manual_throttle = 0.0f;
+    unsigned int time_ms = 0;                 // Current time in ms
+    float lidar_left_distance_mm = 0.0f;      // 0: no obstacle in range, >0 distance in mm
+    float lidar_right_distance_mm = 0.0f;     // 0: no obstacle in range, >0 distance in mm
+    float lidar_front_distance_mm = 0.0f;     // 0: no obstacle in range, >0 distance in mm
+    float lidar_top_distance_mm = 0.0f;       // 0: no obstacle in range, >0 distance in mm
+    float velocity_mps = 0.0f;                // Meter per second
+    float angular_velocity_dps = 0.0f;        // Degrees per second (trigonometric)
+    float manual_direction = 0.0f;            // -1.0 MAX LEFT   +1.0 MAX RIGHT
+    float manual_throttle = 0.0f;             // -1.0 MAX BRAKE  +1.0 MAX THROTTLE
 };
 ```
 
@@ -51,7 +52,7 @@ struct Cautopilot_inut_sensors
 ```
 struct Cautopilot_output_commands
 {
-    float direction = 0.0f;
-    float throttle = 0.0f;
+    float direction = 0.0f;        // -1.0 MAX LEFT   +1.0 MAX RIGHT
+    float throttle = 0.0f;         // -1.0 MAX BRAKE  +1.0 MAX THROTTLE
 };
 ```
