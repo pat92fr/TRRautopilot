@@ -28,7 +28,7 @@ TRR simulator (process) doesn't need to be restarted when TRR autopilot (process
 ## Autopilot data inputs (sensors)
 * Time
 * Distance measured by virtual LIDARs (zero if obstacle distance is too far > 6m)
-* Actual velocity
+* Speed and angular velocity (with noise)
 * Joystick direction and throttle setpoints
 ```
 struct Cautopilot_inut_sensors
