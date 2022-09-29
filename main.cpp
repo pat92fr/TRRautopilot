@@ -15,12 +15,12 @@ struct Cautopilot_example : Cautopilot
 
         // compute actual position
         float position_estimation = 0.0f;
-        if(in.lidar_left_distance_mm==0.0f)
-            position_estimation = in.lidar_right_distance_mm - 6000.0f;
-        else if(in.lidar_right_distance_mm==0.0f)
-            position_estimation = 6000.0f - in.lidar_left_distance_mm;
-        else if(in.lidar_left_distance_mm>0.0f && in.lidar_right_distance_mm>0.0f)
-           position_estimation = in.lidar_right_distance_mm-in.lidar_left_distance_mm;
+        if(in.lidar_left_distance_cm==0.0f)
+            position_estimation = in.lidar_right_distance_cm - 600.0f;
+        else if(in.lidar_right_distance_cm==0.0f)
+            position_estimation = 600.0f - in.lidar_left_distance_cm;
+        else if(in.lidar_left_distance_cm>0.0f && in.lidar_right_distance_cm>0.0f)
+           position_estimation = in.lidar_right_distance_cm-in.lidar_left_distance_cm;
 
         // compute direction setpoint
         float const position_setpoint = 0.0f;
