@@ -31,14 +31,13 @@ TRR simulator (process) doesn't need to be restarted when TRR autopilot (process
 * Speed and angular velocity (with noise)
 * Joystick direction and throttle setpoints
 ```
+#define MAX_LIDARS 8
+
 struct Cautopilot_inut_sensors
 {
     unsigned int command = 0;
     unsigned int time_ms = 0;                 // Current time in ms
-    float lidar_left_distance_cm = 0.0f;      // 0: no obstacle in range, >0 distance in cm
-    float lidar_right_distance_cm = 0.0f;     // 0: no obstacle in range, >0 distance in cm
-    float lidar_front_distance_cm = 0.0f;     // 0: no obstacle in range, >0 distance in cm
-    float lidar_top_distance_cm = 0.0f;       // 0: no obstacle in range, >0 distance in cm
+    float lidar_cm[MAX_LIDARS] = 0.0f;        // 0: no obstacle in range, >0 distance in cm
     float velocity_mps = 0.0f;                // Meter per second
     float angular_velocity_dps = 0.0f;        // Degrees per second (trigonometric)
     float manual_direction = 0.0f;            // -1.0 MAX LEFT   +1.0 MAX RIGHT
